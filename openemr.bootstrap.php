@@ -6,10 +6,11 @@
  * @link      http://www.open-emr.org
  * @author    Ken Chapple <ken@mi-squared.com>
  * @copyright Copyright (c) 2020 Ken Chapple <ken@mi-squared.com>
+ * @copyright Copyright (c) 2025 Discover and Change, Inc, <snielson@discoverandchange.com>
  * @license   https://github.com/openemr/openemr/blob/master/LICENSE GNU General Public License 3
  */
 //namespace PatientPrivacy;
-//require_once __DIR__.'/vendor/autoload.php';
+require_once __DIR__.'/vendor/autoload.php';
 
 use OpenEMR\Events\PatientFinder\PatientFinderFilterEvent;
 use Symfony\Contracts\EventDispatcher\Event;

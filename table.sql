@@ -2,6 +2,7 @@
 -- Table structure for table `mi2_users_patients`
 --
 
+#IfNotTable mi2_users_patients
 CREATE TABLE `mi2_users_patients` (
 `id` bigint(20) NOT NULL,
 `user_id` bigint(20) NOT NULL,
@@ -18,7 +19,6 @@ CREATE TABLE `mi2_users_patients` (
 ALTER TABLE `mi2_users_patients`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `user_id` (`user_id`,`pid`);
-
 --
 -- AUTO_INCREMENT for dumped tables
 --
@@ -28,11 +28,11 @@ ALTER TABLE `mi2_users_patients`
 --
 ALTER TABLE `mi2_users_patients`
 MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT;
-
+#EndIf
 --
 -- Table structure for table `mi2_users_supervisors`
 --
-
+#IfNotTable mi2_users_supervisors
 CREATE TABLE `mi2_users_supervisors` (
   `id` bigint(20) NOT NULL,
   `user_id` bigint(20) NOT NULL,
@@ -59,11 +59,11 @@ ALTER TABLE `mi2_users_supervisors`
 --
 ALTER TABLE `mi2_users_supervisors`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT;
-
+#EndIf
 --
 -- Table structure for table `mi2_exclude_roles`
 --
-
+#IfNotTable mi2_exclude_roles
 CREATE TABLE `mi2_exclude_roles` (
   `id` bigint(20) NOT NULL,
   `gid` int(11) NOT NULL COMMENT 'GACL Group ID'
@@ -88,4 +88,4 @@ ALTER TABLE `mi2_exclude_roles`
 --
 ALTER TABLE `mi2_exclude_roles`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT;
-
+#EndIf

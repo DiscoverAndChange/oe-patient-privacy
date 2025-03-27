@@ -1,1 +1,1 @@
-OpenEMR Patient Privacy Module
+OpenEMR Patient Privacy Module v1.0.1

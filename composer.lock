@@ -1,18 +1,24 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4736480466931bd22a9481168bfe6e43",
+    "content-hash": "834fa8640608df57fa2a3923c73f5a8e",
     "packages": [
         {
-            "name": "mi-squared/mini-framework",
-            "version": "dev-master",
+            "name": "mi-squared/mi-framework",
+            "version": "0.1.5",
             "source": {
                 "type": "git",
-                "url": "https://github.com/mi-squared/mini-framework.git",
-                "reference": "f4492067f21e6e6c3ce88c105625a33e1da6daff"
+                "url": "https://github.com/mi-squared/mi-framework.git",
+                "reference": "6795fb0b7e94303748cc070e9c98c020417ccaa6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mi-squared/mi-framework/zipball/6795fb0b7e94303748cc070e9c98c020417ccaa6",
+                "reference": "6795fb0b7e94303748cc070e9c98c020417ccaa6",
+                "shasum": ""
             },
             "require": {
                 "php": ">=5.3.0"
@@ -20,12 +26,13 @@
             "type": "library",
             "autoload": {
                 "psr-0": {
-                    "Mi2\\Framework": "src/",
+                    "Mi2\\Utils": "src/",
                     "Mi2\\DataTable": "src/",
-                    "Mi2\\Utils": "src/"
+                    "Mi2\\Framework": "src/"
                 },
                 "classmap": []
             },
+            "notification-url": "https://packagist.org/downloads/",
             "authors": [
                 {
                     "name": "Ken Chapple",
@@ -37,17 +44,71 @@
             "keywords": [
                 "openemr"
             ],
-            "time": "2020-01-23T17:42:15+00:00"
+            "support": {
+                "issues": "https://github.com/mi-squared/mi-framework/issues",
+                "source": "https://github.com/mi-squared/mi-framework/tree/0.1.5"
+            },
+            "time": "2021-10-29T16:13:38+00:00"
+        },
+        {
+            "name": "openemr/oe-module-installer-plugin",
+            "version": "0.1.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/openemr/oe-module-installer-plugin.git",
+                "reference": "4803eb0e6ad07328bd0eac485d0b2ff9e075f9f6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/openemr/oe-module-installer-plugin/zipball/4803eb0e6ad07328bd0eac485d0b2ff9e075f9f6",
+                "reference": "4803eb0e6ad07328bd0eac485d0b2ff9e075f9f6",
+                "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "^2.0"
+            },
+            "require-dev": {
+                "composer/composer": "^2.0"
+            },
+            "type": "composer-plugin",
+            "extra": {
+                "class": "OpenEMR\\Composer\\ModuleInstallerPlugin\\Plugin"
+            },
+            "autoload": {
+                "psr-4": {
+                    "OpenEMR\\Composer\\ModuleInstallerPlugin\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Stephen Nielson",
+                    "email": "stephen@nielson.org",
+                    "role": "Developer"
+                }
+            ],
+            "description": "OpenEMR Module Installer plugin for installing custom modules into the OpenEMR codebase.",
+            "keywords": [
+                "openemr",
+                "openemr-module"
+            ],
+            "support": {
+                "issues": "https://github.com/openemr/oe-module-installer-plugin/issues",
+                "source": "https://github.com/openemr/oe-module-installer-plugin/tree/0.1.5"
+            },
+            "time": "2021-05-03T14:22:43+00:00"
         }
     ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "mi-squared/mini-framework": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
-    "platform-dev": []
+    "platform-dev": [],
+    "plugin-api-version": "2.1.0"
 }
