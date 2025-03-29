@@ -1,8 +1,6 @@
 <?php
 
-
 namespace PatientPrivacy;
-
 
 class UserService extends \OpenEMR\Services\UserService
 {

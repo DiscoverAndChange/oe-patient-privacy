@@ -1,8 +1,6 @@
 <?php
 
-
 namespace PatientPrivacy;
-
 
 class PatientPrivacyFilter
 {
@@ -17,12 +15,9 @@ class PatientPrivacyFilter
 
         // First, we check if this user is excluded from privacy rules. If so, it's all good!
         if (UserService::isExcluded($userId)) {
-
             $this->boundValues = [];
             $this->filterClause = "1";
-
         } else {
-
             $sql = "SELECT pid
             FROM (
                 SELECT PD.pid FROM patient_data PD
@@ -78,6 +73,4 @@ class PatientPrivacyFilter
     {
         return $this->boundValues;
     }
-
-
 }

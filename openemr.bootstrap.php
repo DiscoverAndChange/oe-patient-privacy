@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Bootstrap custom Patient Privacy module.
  *
@@ -9,8 +10,9 @@
  * @copyright Copyright (c) 2025 Discover and Change, Inc, <snielson@discoverandchange.com>
  * @license   https://github.com/openemr/openemr/blob/master/LICENSE GNU General Public License 3
  */
+
 //namespace PatientPrivacy;
-require_once __DIR__.'/vendor/autoload.php';
+require_once __DIR__ . '/vendor/autoload.php';
 
 use OpenEMR\Events\PatientFinder\PatientFinderFilterEvent;
 use Symfony\Contracts\EventDispatcher\Event;
@@ -116,7 +118,6 @@ function oe_module_patient_privacy_checkUserForUpdateAuth(\OpenEMR\Events\Patien
     if (\PatientPrivacy\UserService::isExcluded($user['id'])) {
         $event->setAuthorized(true);
     } else {
-
         if (PatientPrivacyService::userHasAccess($user['id'], $event->getPid())) {
             $event->setAuthorized(true);
         } else {
@@ -131,4 +132,3 @@ function oe_module_patient_privacy_checkUserForUpdateAuth(\OpenEMR\Events\Patien
 // interface/patient_file/summary/demogrphics.php and
 // interface/patient_file/summary/demogrphics_full.php
 $eventDispatcher->addListener(\OpenEMR\Events\PatientDemographics\UpdateEvent::EVENT_HANDLE, 'oe_module_patient_privacy_checkUserForUpdateAuth');
-

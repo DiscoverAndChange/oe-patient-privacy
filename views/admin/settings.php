@@ -86,7 +86,8 @@ use OpenEMR\OeUI\OemrUI;
                         <label for="provider-filter-select">Filter by Provider</label>
                         <select name="provider-filter-select" id="filter-by-provider" class="form-control">
                             <option value="">-- Any --</option>
-                            <?php foreach ($this->providers as $provider) { ?>}
+                            <?php foreach ($this->providers as $provider) {
+                                ?>}
                             <option value="<?php echo $provider['id']; ?>"><?php echo $provider['name']; ?></option>
                             <?php } ?>
                         </select>
@@ -309,7 +310,8 @@ use OpenEMR\OeUI\OemrUI;
                     <div class="form-group">
                         <label for="provider-filter-select">Provider</label>
                         <select name="provider_id" id="provider-to-attach" class="form-control">
-                            <?php foreach ($this->providers as $provider) { ?>}
+                            <?php foreach ($this->providers as $provider) {
+                                ?>}
                                 <option value="<?php echo $provider['id']; ?>"><?php echo $provider['name']; ?></option>
                             <?php } ?>
                         </select>

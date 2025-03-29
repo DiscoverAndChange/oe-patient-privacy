@@ -16,7 +16,8 @@ class PatientPrivacyService
             WHERE U.active = '1'",
             "provider-data-table",
             "/interface/modules/custom_modules/oe-patient-privacy/index.php?action=admin!provider_data",
-            new ProviderRowAttributeFilter())
+            new ProviderRowAttributeFilter()
+        )
             ->addColumn(["title" => "ID", "field" => "id"])
             ->addColumn(["title" => "Last Name", "field" => "lname"])
             ->addColumn(["title" => "First Name", "field" => "fname"])
@@ -46,7 +47,8 @@ class PatientPrivacyService
                 ) T",
             "patient-data-table",
             "/interface/modules/custom_modules/oe-patient-privacy/index.php?action=admin!patient_data",
-            new PatientRowAttributeFilter())
+            new PatientRowAttributeFilter()
+        )
             ->addColumn(["title" => "Provider ID", "field" => "provider_id", "visible" => false])
             ->addColumn(["title" => "Provider", "field" => "provider", "visible" => false])
             ->addColumn(["title" => "Last Name", "field" => "lname"])
@@ -104,7 +106,7 @@ class PatientPrivacyService
         $providersForPatient = [];
         $result = sqlStatement($sql);
         while ($row = sqlFetchArray($result)) {
-            $providersForPatient[]= $row;
+            $providersForPatient[] = $row;
         }
 
         return $providersForPatient;
@@ -211,7 +213,7 @@ class PatientPrivacyService
         $providersForPatient = [];
         $result = sqlStatement($sql, [$pid]);
         while ($row = sqlFetchArray($result)) {
-            $providersForPatient[]= $row;
+            $providersForPatient[] = $row;
         }
 
         return $providersForPatient;
@@ -236,7 +238,7 @@ class PatientPrivacyService
         $supervisorsForPatient = [];
         $result = sqlStatement($sql, [$pid]);
         while ($row = sqlFetchArray($result)) {
-            $supervisorsForPatient[]= $row;
+            $supervisorsForPatient[] = $row;
         }
 
         return $supervisorsForPatient;
@@ -264,7 +266,7 @@ class PatientPrivacyService
                 continue;
             }
 
-            $supervisorsForProvider[]= $row;
+            $supervisorsForProvider[] = $row;
         }
 
         return $supervisorsForProvider;
@@ -275,5 +277,4 @@ class PatientPrivacyService
         $privacyFilter = new PatientPrivacyFilter($userId);
         return $privacyFilter;
     }
-
 }

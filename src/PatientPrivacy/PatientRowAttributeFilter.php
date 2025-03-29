@@ -1,8 +1,6 @@
 <?php
 
-
 namespace PatientPrivacy;
-
 
 use Mi2\DataTable\RowAttributeFilterIF;
 
